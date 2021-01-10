@@ -26,7 +26,7 @@ export default function CocktailDisplay( {cocktailUrl}) {
         return <></>;
     }
     return (
-        <div>
+        <div className="container">
             {cocktailData.map(({strDrink, strDrinkThumb}) =>
                 <div className="card">
                     <img src={strDrinkThumb} alt="" className="card-img-top"/>

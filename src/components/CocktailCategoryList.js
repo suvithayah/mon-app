@@ -26,15 +26,24 @@ export default function CocktailCategoryList({ setCategory }) {
 
     return (
         <>
-            <form className="form-inline">
-                <select className="custom-select my-1 mr-sm-2" value={selectedValue} onChange={handleSelection}>
-                    {categories.map(({strCategory}) => (
-                        <option value={strCategory}>
-                            {strCategory}
+            <div className="container">
+                <span>Please select a category of cocktails to see our collection </span>
+            </div>
+
+            <div className="container">
+                <form className="form-inline">
+                    <select className="custom-select my-1 mr-sm-2" value={selectedValue} onChange={handleSelection}>
+                        <option>
+                            -
                         </option>
-                    ))}
-                </select>
-            </form>
+                        {categories.map(({strCategory}) => (
+                            <option value={strCategory}>
+                                {strCategory}
+                            </option>
+                        ))}
+                    </select>
+                </form>
+            </div>
             <CocktailList type={selectedValue} setCocktailUrl={setSelectedValue} />
         </>
     );
