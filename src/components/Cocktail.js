@@ -1,8 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import CocktailDisplay from "./CocktailDisplay";
-import CocktailCategoryList from "./CocktailCategoryList";
-import CocktailList from "./CocktailList";
+import CocktailDisplay from "./cocktail/CocktailDisplay";
+import CocktailCategoryList from "./cocktail/CocktailCategoryList";
+import CocktailList from "./cocktail/CocktailList";
 
 export default function Cocktail( {cocktailUrl}) {
     let [selectedCatgeory, setSelectedCategory] = useState("");
