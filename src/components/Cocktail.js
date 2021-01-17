@@ -6,13 +6,12 @@ import CocktailList from "./cocktail/CocktailList";
 
 export default function Cocktail() {
     let [selectedCategeory, setSelectedCategory] = useState("");
-    let [selectedCocktailUrl, setSelectedCocktailUrl] = useState(null);
 
     return (
         <div className="container">
-            <CocktailDisplay cocktailUrl={selectedCocktailUrl} />
+            <CocktailDisplay />
             <CocktailCategoryList setCategory={setSelectedCategory} />
-            <CocktailList category={selectedCategeory} setCocktailUrl={setSelectedCocktailUrl} />
+            <CocktailList category={selectedCategeory}/>
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-export default function CocktailDisplay( {cocktailUrl}) {
+export default function CocktailDisplay({cocktailUrl}) {
     let [cocktailData, setCocktailData] = useState([]);
 
     useEffect(() => {
@@ -15,7 +15,6 @@ export default function CocktailDisplay( {cocktailUrl}) {
             }
         };
 
-        //setTimeout(fetchData, 10000 * Math.random());
         fetchData();
         return () => {
             lastCalled = false;

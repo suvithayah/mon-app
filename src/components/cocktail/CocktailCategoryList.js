@@ -44,7 +44,7 @@ export default function CocktailCategoryList({ setCategory }) {
                     </select>
                 </form>
             </div>
-            <CocktailList type={selectedValue} setCocktailUrl={setSelectedValue} />
+            <CocktailList type={selectedValue} />
         </>
     );
 }
