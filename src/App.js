@@ -1,24 +1,16 @@
 import './App.css';
-import React from "react"
-
-import { useEffect, useState } from "react";
+import React, {useState} from "react"
 
 import Route from "./components/Route"
 import Header from "./components/Header";
 import Cocktail from "./components/Cocktail";
 import Home from "./components/Home";
 import Association from "./components/Association";
-import CountryDisplay from "./components/country/CountryDisplay";
 import Country from "./components/Country";
-
-
-
-const showComponent = (route, component) => {
-    return window.location.pathname === route ? component : null
-}
 
 function App() {
 
+    let [data, setData] = useState([]);
     return (
         <>
             <Header />
@@ -30,10 +22,10 @@ function App() {
                 <Cocktail />
             </Route>
             <Route path="/country">
-                <Country />
+                <Country data={data} setData={setData} />
             </Route>
           <Route path="/association">
-              <Association />
+              <Association data={data} setData={setData}/>
           </Route>
             </div>
         </>

@@ -1,17 +1,22 @@
 import React, {useState} from "react";
+import CocktailCountry from "./association/CocktailCountry";
 import Country from "./Country";
-import CocktailList from "./cocktail/CocktailList";
+import CountryDisplay from "./country/CountryDisplay";
 
 
 
-export default function Association() {
-    let [selectedCategeory, setSelectedCategory] = useState("");
+export default function Association({data, setData}) {
+    let [country, setCountry] = useState("");
+    const submit = (e) => {
+        e.preventDefault();
+        let country = e.target.country.value;
+        setCountry(country);
+    }
 
     return (
-        <div className="container-left">
-            <Country/>
-
-            <CocktailList category={selectedCategeory} setCocktailUrl={setSelectedCocktailUrl} />
-        </div>
+        <>
+             <Country data={data} setData={setData}/>
+             <CocktailCountry data={data}/>
+       </>
     );
 }

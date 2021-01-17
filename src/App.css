@@ -60,6 +60,11 @@ li{
   list-style: none;
 }
 
-.container-left{
+.home{
+  display: inline-block;
+  margin-bottom: 20px;
+}
 
+.home-inline{
+  padding-bottom: 20px;
 }

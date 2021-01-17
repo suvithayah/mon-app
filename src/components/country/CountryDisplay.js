@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 
-export default function CountryDisplay({search}) {
+export default function CountryDisplay({search, data, setData}) {
 
-    let [data, setCountryData] = useState("");
+    //let [data, setCountryData] = useState("");
 
 
     useEffect(() => {
@@ -10,7 +10,7 @@ export default function CountryDisplay({search}) {
         const fetchData = async () => {
             fetch(`https://restcountries.eu/rest/v2/name/${search}`)
                 .then((response) => response.json())
-                .then((data) => lastCalled && setCountryData(data[0]))
+                .then((data) => lastCalled && setData(data[0]))
                 .catch((e) => console.error(e));
         };
 

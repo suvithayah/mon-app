@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function CocktailList({ category }) {
     let [cocktails, setCocktails] = useState([]);
-
+console.log(category);
     useEffect(() => {
         let lastCalled = true;
         const fetchData = async () => {
