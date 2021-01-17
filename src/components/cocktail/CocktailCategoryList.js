@@ -34,7 +34,7 @@ export default function CocktailCategoryList({ setCategory }) {
                 <form className="form-inline">
                     <select className="custom-select my-1 mr-sm-2" value={selectedValue} onChange={handleSelection}>
                         <option>
-                            -
+                            Select ...
                         </option>
                         {categories.map(({strCategory}) => (
                             <option value={strCategory}>

@@ -9,10 +9,10 @@ const Header = () => {
                     <Link className="nav-link" href="/">Home</Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" href="/music">Music</Link>
+                    <Link className="nav-link" href="/cocktail">Cocktails</Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" href="/cocktail">Cocktails</Link>
+                    <Link className="nav-link" href="/country">Country</Link>
                 </li>
                 <li className="nav-item">
                     <Link className="nav-link" href="/association">Which one ?</Link>

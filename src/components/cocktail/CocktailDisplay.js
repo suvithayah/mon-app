@@ -31,7 +31,7 @@ export default function CocktailDisplay( {cocktailUrl}) {
                 <div className="card">
                     <img src={strDrinkThumb} alt="" className="card-img-top"/>
                     <div className="card-body">
-                        <h7 className="card-title">{strDrink}</h7>
+                        <span className="card-title">{strDrink}</span>
                     </div>
                 </div>
             )}

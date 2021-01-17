@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function CocktailList({ category, setCocktailUrl }) {
+export default function CocktailList({ category }) {
     let [cocktails, setCocktails] = useState([]);
 
     useEffect(() => {
@@ -20,17 +20,17 @@ export default function CocktailList({ category, setCocktailUrl }) {
     }, [category]);
 
     return (
-        <ul>
-            <div>
-                {cocktails.map(({strDrink, strDrinkThumb}) =>
-                    <div className="card">
-                        <img src={strDrinkThumb} alt="" className="card-img-top"/>
-                        <div className="card-body">
-                            <h7 className="card-title">{strDrink}</h7>
-                        </div>
+
+        <div className="container">
+            {cocktails.map(({strDrink, strDrinkThumb}) =>
+                <div className="card">
+                    <img src={strDrinkThumb} alt="" className="card-img-top"/>
+                    <div className="card-body">
+                        <span className="card-title">{strDrink}</span>
                     </div>
-                )}
-            </div>
-        </ul>
+                </div>
+            )}
+        </div>
+
     );
 }

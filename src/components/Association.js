@@ -1,13 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
+import Country from "./Country";
 
 
 
-const Association = () => {
+export default function Association( ) {
+
     return (
-        <div>
-            <span>WIch one ?</span>
+        <div className="container">
+            <Country/>
         </div>
     );
-};
-
-export default Association;
+}
