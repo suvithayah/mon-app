@@ -1,10 +1,7 @@
-import CocktailCategoryList from "../cocktail/CocktailCategoryList";
-import CountryDisplay from "../country/CountryDisplay";
 import CocktailList from "../cocktail/CocktailList";
 import React from "react";
 
-//Fonction permettant de récupérer le monstre adéquat
-function GetTheGoodCocktail(region) {
+function getCategory(region) {
     if (region == 'Europe')
         return <CocktailList category={'Cocktail'}/>
     else if  (region == 'Americas')
@@ -25,7 +22,7 @@ export default function CocktailCountry({data}) {
 
     return (
         <>
-            {GetTheGoodCocktail(data.region)}
+            {getCategory(data.region)}
         </>
     );
 

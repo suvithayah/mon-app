@@ -2,9 +2,6 @@ import React, {useEffect, useState} from "react";
 
 export default function CountryDisplay({search, data, setData}) {
 
-    //let [data, setCountryData] = useState("");
-
-
     useEffect(() => {
         let lastCalled = true;
         const fetchData = async () => {
